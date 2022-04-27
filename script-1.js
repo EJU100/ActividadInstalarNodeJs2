@@ -3,19 +3,21 @@ var mysql = require('mysql');
 // Consulta SQL.
 var sql = 'SELECT * FROM category LIMIT 10';
 
+debugger 
 // Parámetros de conexión a la base de datos.
 var con = mysql.createConnection({
-  host: "tu-host",
-  user: "tu-user-de-db",
-  password: "tu-pass-de-db",
-  database : 'tu-nombre-de-db'
+  host: "localhost",
+  user: "root",
+  password: "localhost22!",
+  database : 'eshop'
 });
 
-// Funcion que nos permite comprobar la conexión a la base de datos.
-// con.connect(function(err) {
-//   if (err) throw err;
-//   console.log("Connected!");
-// });
+
+//Funcion que nos permite comprobar la conexión a la base de datos.
+ con.connect(function(err) {
+   if (err) throw err;
+  console.log("Connected!");
+ });
 
 // Funcion que nos devolverá resultados de la base de datos.
 con.connect(function(err) {
